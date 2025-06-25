@@ -17,7 +17,5 @@ Imports:
     lubridate,
     read.dbc,
     foreign,
-    tidyr,
-    PaSim
-Remotes: danicat/read.dbc,
-    abelbrasil/PaSim
+    tidyr
+Remotes: danicat/read.dbc

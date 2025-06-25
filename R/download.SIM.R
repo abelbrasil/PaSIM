@@ -25,12 +25,12 @@ download.SIM <- function(uf, periodo, dir = ".", filename = NULL) {
     cat("O arquivo 'read.dbc' Já existe no diretório library do R. \n")
   } else {
     # Full path of the 'read.dbc' folder
-    caminho_pasta <- system.file("Arquivos_externos", package = "PaSIM")
+    caminho_pasta <- system.file("Arquivos_externos", package = "PaSim")
     caminho_completo <- file.path(caminho_pasta, "read.dbc")
 
     # Destination directory
-    dest_dir <- file.path(system.file(package = "PaSIM"))
-    dest_dir <- gsub('PaSIM','', dest_dir)
+    dest_dir <- file.path(system.file(package = "PaSim"))
+    dest_dir <- gsub('PaSim','', dest_dir)
 
     # Move the file to the destination directory
     novo_caminho_completo <- file.path(dest_dir, "read.dbc")

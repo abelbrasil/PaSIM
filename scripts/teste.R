@@ -1,6 +1,8 @@
-remove.packages(PaSim)
+install.packages("gitcreds")
+install.packages("remotes")
+remove.packages("PaSim")
 remotes::install_github("abelbrasil/PaSim")
-library(PaSIM)
+library(PaSim)
 
 SIM2 <- download.SIM(uf = "CE", period = (2010:2023))
 
