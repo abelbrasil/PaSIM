@@ -1,0 +1,13 @@
+name: PaSIM-web
+title: PaSIM-web
+username: w3sy5o-luan0augusto-sousa0nascimento
+account: w3sy5o-luan0augusto-sousa0nascimento
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 14991074
+bundleId: 10519055
+url: https://w3sy5o-luan0augusto-sousa0nascimento.shinyapps.io/PaSIM-web/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: CNES.R|dictionary.R|SIM/DOCE2023.DBC|teste.R
