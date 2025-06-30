@@ -72,7 +72,7 @@ process.SIM <- function(data) {
            ESC2010=recode(ESC2010,`0`="Sem escolaridade",`1`="Fundamental I (1ª a 4ª série)",`2`="Fundamental II (5ª a 8ª série)",
                           `3`="Médio (antigo 2º Grau)",`4`="Superior incompleto",`5`="Superior completo",`9`="Ignorado"),
 
-           LOCOCOR=recode(LOCOCOR,`1`="Hospital",`2`="Outros estabelecimentos de saúde",`3`="domicílio",`4`="via pública",`5`="outros",
+           LOCOCOR=recode(LOCOCOR,`1`="Hospital",`2`="Outros estabelecimentos de saúde",`3`="Domicílio",`4`="Via pública",`5`="Outros",
                           `6`="Aldeia indígena",`9`="Ignorado"),
 
            ESCMAE2010=recode(ESCMAE2010,`0`="Sem escolaridade",`1`="Fundamental I (1ª a 4ª série)",`2`="Fundamental II (5ª a 8ª série)",
@@ -101,7 +101,7 @@ process.SIM <- function(data) {
 
            ACIDTRAB=recode(ACIDTRAB,`1`="Sim",`2`="Não",`9`="Ignorado"),
 
-           FONTE=recode(FONTE,`1`="Ocorrência policial",`2`="Hospital",`3`="Família",`4`="Outra",`5`="Ignorado"),
+           FONTE=recode(FONTE,`1`="Ocorrência policial",`2`="Hospital",`3`="Família",`4`="Outra",`9`="Ignorado"),
 
            ESC=recode(ESC, `0`="Nenhuma",`1`="Nenhuma",`2`="1 a 3 anos",`3`="4 a 7 anos",`4`="8 a 11 anos",`5`="12 e mais",`9`="Ignorado"),
 

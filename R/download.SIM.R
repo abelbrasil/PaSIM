@@ -10,8 +10,8 @@
 #' @export
 #'
 #' @examples
-#' ce <- download.SIM(2022,UF="  CE")
-download.SIM <- function(inicio,fim,UF="all",cod_estab="") {
+#' ce <- download.SIM(inicio = 2022, fim = 2022,UF= "CE")
+download.SIM <- function(inicio,fim,UF="all") {
   require(read.dbc)
   require(dplyr)
   require(lubridate)

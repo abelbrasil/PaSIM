@@ -4,17 +4,27 @@
 \alias{download.SIM}
 \title{Download SIM}
 \usage{
-download.SIM(uf, periodo, dir = ".", filename = NULL)
+download.SIM(inicio, fim, UF = "all")
 }
 \arguments{
-\item{uf}{The state acronym.}
+\item{inicio}{The year that start the files extract.}
 
-\item{periodo}{A vector with one or two value(s): Strings indicating the period at the start of the interval of the required publications in the format "YYYY".}
+\item{fim}{The year that finish the files extract. By default the last year. Can't be the current year.}
 
-\item{dir}{A string indicating the output directory where the files will be stored (the default is the directory created within the User's Documents folder).}
-
-\item{filename}{A string indicating the name of the file for the downloaded file (the default is constructed based on the input parameters from the directory of the user's Documents folder).}
+\item{UF}{The state acronym.}
+}
+\value{
+A data frame with the filtered raw SIM data.
 }
 \description{
 Download SIM
+}
+\examples{
+ce <- download.SIM(inicio = 2022, fim = 2022,UF= "CE")
+}
+\seealso{
+\code{\link{process.SIM} \link{panel.SIM}}
+}
+\author{
+Luan Augusto, \email{luanguto87@gmail.com}
 }
