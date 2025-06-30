@@ -3,7 +3,7 @@ if (!require("read.dbc")) {
   library(read.dbc)
 }
 if (!require("PaSim")) {
-  remotes::install_github("abelbrasil/PaSim", upgrade = "never")
+  remotes::install_github("abelbrasil/PaSim")
   library(PaSim)
 }
 library(shiny)

@@ -97,7 +97,7 @@ process.SIM <- function(data) {
 
            NECROPSIA=recode(NECROPSIA,`1`="Sim",`2`="Não",`9`="Ignorado"),
 
-           CIRCOBITO=recode(CIRCOBITO,`1`="Acidente",`2`="Suicídio",`3`="Homicídio",`4`="Outros",`5`="Ignorado"),
+           CIRCOBITO=recode(CIRCOBITO,`1`="Acidente",`2`="Suicídio",`3`="Homicídio",`4`="Outros",`9`="Ignorado"),
 
            ACIDTRAB=recode(ACIDTRAB,`1`="Sim",`2`="Não",`9`="Ignorado"),
 
@@ -205,9 +205,6 @@ process.SIM <- function(data) {
   SIM$CODMUNOCOR <- as.integer(SIM$CODMUNOCOR)
 
   SIM <- SIM %>%
-    left_join(CID10%>% select(CID10, DESCR),by=join_by(TERM==CID10),keep = FALSE)
-
-  SIM <- SIM %>%
     left_join(TABUF%>% select(SIGLA_UF,CODIGO),by=join_by(CODUFNATU==CODIGO),keep = F)
 
   SIM <- SIM %>%
@@ -291,7 +288,7 @@ process.SIM <- function(data) {
                                                                                ifelse(SIM$OCUP=="517315","Agente de segurança penitenciária",
                                                                                       ifelse(SIM$OCUP=="510125","Chefe de cozinha",SIM$TITULO)))))))))))
   SIM <- SIM %>%
-    rename(OCUPDESC = TITULO, CAUSATERM=DESCR)
+    rename(OCUPDESC = TITULO)
 
   SIM <- SIM %>%
     mutate(

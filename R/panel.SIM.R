@@ -20,7 +20,7 @@ panel.SIM <- function(data) {
 
            `Parto`=PARTO,`Semanas de Gestação`=SEMAGESTAC,`Gestação`=GESTACAO,`Gravidez`=GRAVIDEZ,`Óbito Parto`=OBITOPARTO, `Óbito na Gravidez`=OBITOGRAV,`Óbito durante o puerpério`=OBITOPUERP, `Situação Gestacional` = TPMORTEOCO,
 
-           `Assistência Médica`=ASSISTMED, `Exame`=EXAME, `Cirurgia`=CIRURGIA, `Necropsia`=NECROPSIA, LINHAA, LINHAB, LINHAC, LINHAD, LINHAII, `Causa Básica`=CAUSABAS, `Circunstância`=CIRCOBITO,  `Fonte`=FONTE,`Acidente de Trabalho`=ACIDTRAB, `Óbito Investigado`=TPPOS,`Ano`=ANO,`Mês-Ano`=MES_ANO,`Idade da Mãe`= IDADEMAE,
+           `Assistência Médica`=ASSISTMED, `Exame`=EXAME, `Cirurgia`=CIRURGIA, `Necropsia`=NECROPSIA, LINHAA, LINHAB, LINHAC, LINHAD, LINHAII, `Causa Básica`=CAUSABAS, `Causa Terminal`=TERM, `Circunstância`=CIRCOBITO,  `Fonte`=FONTE,`Acidente de Trabalho`=ACIDTRAB, `Óbito Investigado`=TPPOS,`Ano`=ANO,`Mês-Ano`=MES_ANO,`Idade da Mãe`= IDADEMAE,
 
            `Faixa Etária da Mãe`=FAIXA_ETARIA_MAE,`Anos de Escolaridade da Mãe` = ESCMAE,`Ocupação da Mãe`=OCUPMAEDESC,
 

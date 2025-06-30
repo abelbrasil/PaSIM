@@ -1,20 +1,18 @@
-install.packages("gitcreds")
-install.packages("remotes")
-remove.packages("PaSim")
 remotes::install_github("abelbrasil/PaSim")
 library(PaSim)
 
-SIM2 <- download.SIM(uf = "CE", period = (2010:2023))
+SIM <- download.SIM(inicio = 2023, fim = 2023, UF = "CE")
 
-download.SIM(uf = "CE", period = (2019:2023))
+SIML <- process.SIM(SIM)
 
-SIM2L <- process.SIM(SIM2)
+fSIM <- panel.SIM(SIML)
 
-base <- SIM2L %>%
-    filter(FAIXA_ETARIA=="<1 ano")
+dCIDB <- CID
 
-table(SIM3$FAIXA_ETARIA)
+dCIDT <- CID
 
-fSIM <- panel.SIM(SIM2L)
+dMUN <- CADMUN
 
-save("fSIM","CID", file = "dataset.Rdata")
+rm(SIM, SIML)
+
+save.image("database.Rdata")
