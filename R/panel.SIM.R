@@ -12,7 +12,7 @@ panel.SIM <- function(data) {
   base <- data %>%
     select(`Tipo de Óbtito`= TIPOBITO, `Data do Óbito` = DTOBITO, `Hora do Óbito`=HORAOBITO, `Idade`=IDADEINT,`Faixa Etária`=FAIXA_ETARIA,
 
-           `Código Município de Naturalidade`=CODMUNNATU,`Município de Naturalidade`=MUNNATU,`Data de Nascimento`=DTNASC,`UF de Naturalidade`=UFNATU,
+           `Código Município de Naturalidade`=CODMUNNATU,`Município de Naturalidade`=MUNNATU,`Data de Nascimento`=DTNASC,`UF de Naturalidade`=UFNATU, `Região de Ocorrência`=REGIAO_OCOR, `Região de Residência`=REGIAO_RES,`Vínculo`=VINCULO,
 
            `Sexo`=SEXO,`Estado Civil` = ESTCIV,`Anos de Escolaridade` = ESC,`Código Ocupação`=OCUP, `Ocupação`=OCUPDESC,`Raça/Cor`=RACACOR, `Código Município de Residência`=CODMUNRES,
 

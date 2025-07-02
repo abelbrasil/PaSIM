@@ -410,5 +410,27 @@ process.SIM <- function(data) {
       ESCMAE=="Nenhuma" ~ 1
     ))
 
+  SIM <- SIM %>%
+    mutate(REGIAO_OCOR = case_when(
+      UFOCOR %in% c("AC", "AP", "AM", "PA", "RO", "RR", "TO") ~ "Norte",
+      UFOCOR %in% c("AL", "BA", "CE", "MA", "PB", "PE", "PI", "RN", "SE") ~ "Nordeste",
+      UFOCOR %in% c("ES", "MG", "RJ", "SP") ~ "Sudeste",
+      UFOCOR %in% c("PR", "RS", "SC") ~ "Sul",
+      UFOCOR %in% c("DF", "GO", "MT", "MS") ~ "Centro-Oeste",
+      TRUE ~ "Desconhecido" # Caso algum UF não esteja mapeado
+    ))
+
+  SIM <- SIM %>%
+    mutate(REGIAO_RES = case_when(
+      UFRES %in% c("AC", "AP", "AM", "PA", "RO", "RR", "TO") ~ "Norte",
+      UFRES %in% c("AL", "BA", "CE", "MA", "PB", "PE", "PI", "RN", "SE") ~ "Nordeste",
+      UFRES %in% c("ES", "MG", "RJ", "SP") ~ "Sudeste",
+      UFRES %in% c("PR", "RS", "SC") ~ "Sul",
+      UFRES %in% c("DF", "GO", "MT", "MS") ~ "Centro-Oeste",
+      TRUE ~ "Desconhecido" # Caso algum UF não esteja mapeado
+    ))
+
+  SIM$VINCULO <- ifelse(SIM$CODESTAB %in% hospital_universitario_ebserh$CNES,"EBSERH","Outros")
+
   return(SIM)
 }

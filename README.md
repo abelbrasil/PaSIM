@@ -39,11 +39,26 @@ remotes::install_github("abelbrasil/PaSim")
 
 5.  Update the Power BI dashboard models: The functions will automatically open the PowerBI executable, where you will only need to update the dashboard, as the model is ready for viewing.
 
+## Functions
+
+-   `download.SIM` is the primordial function of this package. This function is responsible to download the data from the DATASUS FTP Directory. The user enters with the year and the state they want and the output is a data frame with the raw information.
+
+-   `label.SIM` needs a data frame created by the function `download.SIM` and this function is responsible to choose the util columns, clean the data and replace the code by the respective labels.
+
+-   `panel.SIM` is used to select and handle the columns required for the Power BI dashboard.
+
 ## Example
 
 ``` r
 library(PaSim)
-download.SIM(uf = "CE", period = (2019:2021))
+data <- download.SIM(UF = "CE", inicio = 2021, fim = 2023)
+data_processed <- process.SIM(data)
+fSIM <- panel.SIM(data_processed)
+dCIDB <- CID
+dCIDT <- CID
+dMUN <- CADMUN
+rm(SIM, SIML)
+save.image(file = "caminho_do_arquivo/dataset.Rdata")
 ```
 
 ## Contributing
