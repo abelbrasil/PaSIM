@@ -1,6 +1,6 @@
 # PaSim
 
-This repository contains an R package called "PaSim" that provides functions for accessing and processing data from DATASUS (Department of Informatics of the Unified Health System) and updating the corresponding Power BI dashboard models, all in an automated manner.
+This repository contains an R package called "PaSim" that provides functions for accessing and processing data from DATASUS (Department of Informatics of the Unified Health System) and updating the corresponding Power BI dashboard models.
 
 ## Overview
 
@@ -8,7 +8,9 @@ The "PaSim" package was designed to simplify and accelerate the process of obtai
 
 #### The visualization of the dashboards will be similar to this:
 
-##### Note: The following images show not only the dashboard but also the functionalities of the buttons.
+![](capa.png){width="280"} ![](sumário.png){width="280"}
+
+![](Visão%20Geral.png){width="280"} ![](CID.png){width="280"}
 
 ## Features
 
@@ -60,6 +62,14 @@ dMUN <- CADMUN
 rm(SIM, SIML)
 save.image(file = "database.Rdata")
 ```
+
+## How to use the dashboard
+
+After open the file `Painel Mortalidade` avaliable in \inst\extdata,
+
+![](exibição.png)
+
+![](tramsformar.png)
 
 ## Contributing
 
