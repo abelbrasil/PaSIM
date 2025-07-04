@@ -37,7 +37,7 @@ remotes::install_github("abelbrasil/PaSim")
 
 4.  Compile the function with the desired parameter information: The functions of the package download the data from the requested Information System, process the data, performing cleanings, transformations, and organization as necessary for the base to be readable to become useful information on the dashboard.
 
-5.  Update the Power BI dashboard models: The functions will automatically open the PowerBI executable, where you will only need to update the dashboard, as the model is ready for viewing.
+5.  Update the Power BI dashboard models: After save the .RData file, open the Power BI and change the source of the data, importing the new database through the R code.
 
 ## Functions
 
@@ -58,7 +58,7 @@ dCIDB <- CID
 dCIDT <- CID
 dMUN <- CADMUN
 rm(SIM, SIML)
-save.image(file = "caminho_do_arquivo/dataset.Rdata")
+save.image(file = "database.Rdata")
 ```
 
 ## Contributing
